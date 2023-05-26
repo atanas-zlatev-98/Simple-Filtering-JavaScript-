@@ -48,43 +48,33 @@
 
                               <div class="genres">
                                 <label>Filter by Genre</label>
-                                <div class="d-flex flex-column">
-                                <button type="button" class="btn btn-primary m-2"  value="Adventures" id="filter">Adventures</button>
-                                <button type="button" class="btn btn-primary m-2"  value="Action-Adventure" id="filter">Action-Adventure</button>
-                                <button type="button" class="btn btn-primary m-2"  value="Racing" id="filter">Racing</button>
-                                <button type="button" class="btn btn-primary m-2"  value="Horror" id="filter">Horror</button>
-                                <button type="button" class="btn btn-primary m-2"  value="Sport" id="filter">Sport</button>
-                                <button type="button" class="btn btn-primary m-2"  value="Open-World" id="filter">Open-World</button>
-                                 </div>
-
-
-
-
-
-
+                                   <div class="d-flex flex-column">
+                                    <button type="button" class="btn btn-primary m-2"  value="Adventures" id="filter">Adventures</button>
+                                    <button type="button" class="btn btn-primary m-2"  value="Action-Adventure" id="filter">Action-Adventure</button>
+                                    <button type="button" class="btn btn-primary m-2"  value="Racing" id="filter">Racing</button>
+                                    <button type="button" class="btn btn-primary m-2"  value="Horror" id="filter">Horror</button>
+                                    <button type="button" class="btn btn-primary m-2"  value="Sport" id="filter">Sport</button>
+                                    <button type="button" class="btn btn-primary m-2"  value="Open-World" id="filter">Open-World</button>
+                                   </div>
                               </div>
-                            
-                              
                         </div>
                       </div>
                     </div>
                   </div>
 
-
-
             </div>
+
             <div class="container content d-flex flex-column">
-                <div class="sorting d-flex align-items-center flex-row">
-                  <p class="m-0">Sorting: </p>
-                  <button type="button" class="btn btn-primary m-2">Price(asc)</button>
-                  <button type="button" class="btn btn-primary m-2">Price(desc)</button>
-                </div>
 
-                <div class="games d-flex flex-row"> 
-                    <div id="games-list" class="d-flex flex-wrap flex-row p-5">
+                  <div class="sorting d-flex align-items-center flex-row">
+                    <p class="m-0">Sorting: </p>
+                    <button type="button" class="btn btn-primary m-2">Price(asc)</button>
+                    <button type="button" class="btn btn-primary m-2">Price(desc)</button>
+                  </div>
 
-                     </div>
-            </div>
+                  <div class="games d-flex flex-row"> 
+                      <div id="games-list" class="d-flex flex-wrap flex-row p-5"></div>
+                  </div>
 
             <div>
 
@@ -93,35 +83,29 @@
     </div>
 
 
-
-
         <div id="games-list-template" class="d-none">
             <div class="d-flex flex-column game-card m-2 p-2 justify-content-between">
-              <div class="d-flex align-items-center justify-content-center flex-column p-0 m-0">
-                <img src="" class="game-img m-1">
-                <div class="m-0 p-0 game-title-container">
-                  <p class="fw-bold game-title m-0 ps-1"></p> 
+
+                <div class="d-flex align-items-center justify-content-center flex-column p-0 m-0">
+                      <img src="" class="game-img m-1">
+                        <div class="m-0 p-0 game-title-container">
+                            <p class="fw-bold game-title m-0 ps-1"></p> 
+                        </div>
                 </div>
-             
-                
-             
-              </div>
              
                  
                  <div class="d-flex ps-1">
-                  <p class="d-flex flex-row m-0 gray font-12">Genre:</p>
-                  <p class="game-genre ps-2 m-0 gray font-12"></p>
+                    <p class="d-flex flex-row m-0 gray font-12">Genre:</p>
+                    <p class="game-genre ps-2 m-0 gray font-12"></p>
                  </div>
 
                  <div>
 
                   <div class="d-flex justify-content-between align-items-center">
-                   
                     <div class="d-flex flex-row ps-1 price">
                       <p class="game-price m-0"></p>
-                      <p class="m-0 orange lv">лв.</p>
+                      <p class="m-0 orange lv">BGN.</p>
                     </div>
-
                     <div class="d-flex align-items-center">
                       <div id="favorite-icon" class="icons me-2" ></div>
                       <div id="cart" class="icons"></div>
@@ -129,8 +113,6 @@
                   </div>
                  
                  </div>
-                
-               
                 
             </div>
         </div>
