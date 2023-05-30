@@ -160,13 +160,43 @@ const gamesData = [
 
 $gameList = $('#games-list');
 
+
+
 function render(){
     $gameList.empty();
+
+    const dataSort = [];
     gamesData.forEach(game => {
         const $template = template(game);
         $gameList.append($template);
+        dataSort.push(game);
     })
+
+    const btnAscRender = document.querySelector("#ascSort");
+    btnAscRender.addEventListener('click', () => {
+        $gameList.empty();
+        dataSort.sort((a,b)=> {return a.price - b.price});
+        dataSort.forEach(game => {
+            const $templateSort = template(game);
+            $gameList.append($templateSort);
+        })
+       
+    })
+
+    const btnDescRender = document.querySelector("#descSort");
+    btnDescRender.addEventListener('click', () => {
+        $gameList.empty();
+        dataSort.sort((a,b)=> {return b.price - a.price});
+        dataSort.forEach(game => {
+            const $templateSort = template(game);
+            $gameList.append($templateSort);
+        })
+       
+    })
+
+    
 }
+
 
 function template(game){
     const templateSelector = $(`#games-list-template`);
@@ -188,16 +218,40 @@ const buttonValue = document.querySelectorAll("#filter");
 function logData(buttonClicked) {
     $gameList.empty();
 
+    const allData =[];
     const genreSelected = buttonClicked.value;
 
-    const filterGenres = gamesData.filter(game => game.genre.includes(genreSelected) || game.platform.includes(genreSelected));
+    const filterGenres = gamesData.filter(game => game.genre.includes(genreSelected) || game.platform.includes(genreSelected) || genreSelected === 'All');
 
     filterGenres.forEach(game => {
         const $template = template(game);
         $gameList.append($template);
+        allData.push(game);
     })
 
+    const btnAsc = document.querySelector("#ascSort");
+    btnAsc.addEventListener('click', () => {
+        $gameList.empty();
+        allData.sort((a,b)=> {return a.price - b.price});
+        allData.forEach(game => {
+            const $templateSort = template(game);
+            $gameList.append($templateSort);
+        })
+       
+    })
+
+    const btnDesc = document.querySelector("#descSort");
+    btnDesc.addEventListener('click', () => {
+        $gameList.empty();
+        allData.sort((a,b) => {return b.price - a.price});
+
+        allData.forEach(game => {
+            const $templateSort = template(game);
+            $gameList.append($templateSort);
+        })
+    })
 }
+
 
 function filterByName() {
     $gameList.empty();
@@ -211,11 +265,10 @@ function filterByName() {
     })
 }
 
-
-buttonValue.forEach(buttonClicked => {
-    buttonClicked.addEventListener('click', () => {
-        logData(buttonClicked)
+    buttonValue.forEach(buttonClicked => {
+        buttonClicked.addEventListener('click', () => {
+            logData(buttonClicked)
+        })
     })
-})
 
-render();
+    render()

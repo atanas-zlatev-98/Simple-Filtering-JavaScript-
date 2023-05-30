@@ -39,10 +39,17 @@
                                   
                               <div class="d-flex flex-column">
                                 <label>Platform</label>
-                                <div class="d-flex flex-row">
-                                  <button type="button" class="btn btn-primary m-2" value="PC" id="filter">PC</button>
-                                  <button type="button" class="btn btn-primary m-2" value="PS5" id="filter">PS5</button>
-                                  <button type="button" class="btn btn-primary m-2" value="PS4" id="filter">PS4</button>
+                                <div class="d-flex flex-column">
+                                  <div class="d-flex ">
+                                    <button type="button" class="btn btn-primary m-2 render-all" value="All" id="filter">All</button>
+                                  </div>
+                                 
+                                  <div class="d-flex flex-row justify-content-evenly">
+                                    <button type="button" class="btn btn-primary m-2" value="PC" id="filter">PC</button>
+                                    <button type="button" class="btn btn-primary m-2" value="PS5" id="filter">PS5</button>
+                                    <button type="button" class="btn btn-primary m-2" value="PS4" id="filter">PS4</button>
+                                  </div>
+                                  
                                 </div>
                               </div>
 
@@ -68,8 +75,8 @@
 
                   <div class="sorting d-flex align-items-center flex-row">
                     <p class="m-0">Sorting: </p>
-                    <button type="button" class="btn btn-primary m-2">Price(asc)</button>
-                    <button type="button" class="btn btn-primary m-2">Price(desc)</button>
+                    <button type="button"  class="btn btn-primary m-2" id="ascSort">Price(asc)</button>
+                    <button type="button" class="btn btn-primary m-2" id="descSort">Price(desc)</button>
                   </div>
 
                   <div class="games d-flex flex-row"> 
